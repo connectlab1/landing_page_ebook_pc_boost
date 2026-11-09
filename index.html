@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Boost | Libere o Verdadeiro Potencial do Seu PC</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#00f0ff',
+                            purple: '#7000ff',
+                            magenta: '#ff007f',
+                            dark: '#0a0a10',
+                            card: '#12121e',
+                            border: '#1f1f35'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 25px rgba(0, 240, 255, 0.4)',
+                        'neon-purple': '0 0 25px rgba(112, 0, 255, 0.4)',
+                        'neon-magenta': '0 0 25px rgba(255, 0, 127, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #06060a;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        
+        .glow-bg-blue {
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        }
+        .glow-bg-purple {
+            background: radial-gradient(circle, rgba(112, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        }
+
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #00f0ff 0%, #7000ff 50%, #ff007f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(18, 18, 30, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 240, 255, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(0, 240, 255, 0.2);
+        }
+
+        /* Continuous Pulse Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1deg); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="relative cyber-grid min-h-screen selection:bg-brand-purple selection:text-white">
+
+    <!-- Ambient Background Glows -->
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] glow-bg-blue pointer-events-none -z-10"></div>
+    <div class="fixed bottom-1/3 right-10 w-[600px] h-[600px] glow-bg-purple pointer-events-none -z-10"></div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card bg-opacity-80 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-blue to-brand-purple flex items-center justify-center shadow-neon-blue">
+                    <i data-lucide="zap" class="w-6 h-6 text-black font-bold"></i>
+                </div>
+                <span class="text-xl font-black tracking-wider text-white">PC<span class="text-brand-blue">BOOST</span></span>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#beneficios" class="hover:text-brand-blue transition-colors">Benefícios</a>
+                <a href="#modulos" class="hover:text-brand-blue transition-colors">Conteúdo</a>
+                <a href="#para-quem" class="hover:text-brand-blue transition-colors">Para Quem É</a>
+                <a href="#faq" class="hover:text-brand-blue transition-colors">FAQ</a>
+            </nav>
+
+            <a href="#garanta-o-seu" class="relative group overflow-hidden rounded-xl p-px font-semibold text-sm">
+                <span class="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-purple to-brand-magenta transition-all duration-300 group-hover:opacity-90"></span>
+                <span class="relative px-5 py-2.5 rounded-[11px] bg-brand-dark flex items-center space-x-2 transition-all duration-300 group-hover:bg-transparent">
+                    <span>Baixar Agora</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-44 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Copy Column -->
+            <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-semibold uppercase tracking-wider">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span>Guia Definitivo 2026</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white">
+                    Aprenda a <span class="text-gradient">Destravar o Potencial</span> Máximo do seu PC
+                </h1>
+
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Elimine gargalos de FPS, otimize o Windows sem formatar, reduza a latência do sistema e faça seu computador voar baixo — mesmo se for uma máquina antiga.
+                </p>
+
+                <!-- Stats Badges -->
+                <div class="grid grid-cols-3 gap-4 pt-2 max-w-lg mx-auto lg:mx-0 border-y border-white/10 py-4">
+                    <div>
+                        <div class="text-2xl font-bold text-brand-blue">+60 FPS</div>
+                        <div class="text-xs text-gray-400">Ganho Estimado</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-brand-purple">-45%</div>
+                        <div class="text-xs text-gray-400">Menos Input Lag</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-brand-magenta">100%</div>
+                        <div class="text-xs text-gray-400">Seguro e Reversível</div>
+                    </div>
+                </div>
+
+                <!-- Call to Actions -->
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="#garanta-o-seu" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-blue to-brand-purple font-bold text-black shadow-neon-blue hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                        <span>Quero Turbinar Meu PC Agora</span>
+                    </a>
+                    <a href="#modulos" class="w-full sm:w-auto px-6 py-4 rounded-xl glass-card font-semibold text-gray-300 hover:text-white hover:bg-white/5 transition-all flex items-center justify-center space-x-2">
+                        <span>Ver Sumário do eBook</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="flex items-center justify-center lg:justify-start space-x-4 text-xs text-gray-400 pt-2">
+                    <span class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mr-1.5"></i> Acesso Imediato em PDF</span>
+                    <span class="flex items-center"><i data-lucide="shield-check" class="w-4 h-4 text-brand-blue mr-1.5"></i> 7 Dias de Garantia</span>
+                </div>
+            </div>
+
+            <!-- Right Visual / Mockup Column -->
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="relative w-full max-w-md animate-float">
+                    
+                    <!-- Decorative Backdrop Glow -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-blue to-brand-purple rounded-3xl blur-2xl opacity-40"></div>
+
+                    <!-- eBook 3D Mockup Container -->
+                    <div class="relative rounded-2xl glass-card p-6 border border-white/20 shadow-2xl bg-brand-card/90">
+                        <!-- Top Cyber Ribbon -->
+                        <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
+                            <span class="text-xs font-mono text-brand-blue tracking-wider">&lt;PERFORMANCE_GUIDE_V2&gt;</span>
+                            <div class="flex space-x-1.5">
+                                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                            </div>
+                        </div>
+
+                        <!-- eBook Cover Representation -->
+                        <div class="relative rounded-xl overflow-hidden border border-brand-blue/30 aspect-[3/4] bg-gradient-to-br from-brand-dark via-brand-card to-black p-6 flex flex-col justify-between group">
+                            
+                            <!-- Cover Background Pattern -->
+                            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#00f0ff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+                            <!-- Header Cover -->
+                            <div class="relative z-10 flex justify-between items-start">
+                                <div class="w-10 h-10 rounded-lg bg-brand-blue/20 flex items-center justify-center border border-brand-blue/50">
+                                    <i data-lucide="cpu" class="w-6 h-6 text-brand-blue"></i>
+                                </div>
+                                <span class="text-xs font-mono bg-brand-purple/30 text-brand-purple px-2 py-1 rounded border border-brand-purple/40">EDITION 2026</span>
+                            </div>
+
+                            <!-- Center Cover Titles -->
+                            <div class="relative z-10 my-auto text-left">
+                                <h3 class="text-xs uppercase font-bold tracking-widest text-brand-blue mb-1">EBOOK VIP</h3>
+                                <h2 class="text-3xl font-black text-white leading-none tracking-tight">PC BOOST</h2>
+                                <p class="text-xs text-gray-400 mt-2">O Guia Definitivo de Otimização e Performance de Sistema</p>
+                            </div>
+
+                            <!-- Bottom Cover Footer -->
+                            <div class="relative z-10 border-t border-white/10 pt-3 flex justify-between items-center text-xs text-gray-400">
+                                <span>Por Especialistas em Tech</span>
+                                <i data-lucide="gauge" class="w-5 h-5 text-brand-magenta"></i>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badges on Mockup -->
+                        <div class="absolute -bottom-4 -right-4 glass-card px-4 py-2.5 rounded-xl border border-brand-blue/40 flex items-center space-x-3 shadow-lg">
+                            <i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i>
+                            <div>
+                                <div class="text-xs font-bold text-white">0% Input Lag</div>
+                                <div class="text-[10px] text-gray-400">Configuração de BIOS & Windows</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Key Features / Benefits Grid -->
+    <section id="beneficios" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-brand-blue mb-3">Resultados Reais</h2>
+            <p class="text-3xl sm:text-4xl font-black text-white">O que você vai conquistar no seu computador?</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Feature Card 1 -->
+            <div class="glass-card p-8 rounded-2xl relative transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-brand-blue mb-6">
+                    <i data-lucide="gamepad-2" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Mais FPS nos Jogos</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Elimine travamentos repentinos (*stuttering*) e ganhe estabilidade nas taxas de quadros em games competitivos e pesados.
+                </p>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div class="glass-card p-8 rounded-2xl relative transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-brand-purple mb-6">
+                    <i data-lucide="clock" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Inicialização em Segundos</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Aprenda a desativar de forma inteligente dezenas de serviços inúteis do Windows que iniciam ocultos no segundo plano.
+                </p>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div class="glass-card p-8 rounded-2xl relative transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-brand-magenta/10 border border-brand-magenta/30 flex items-center justify-center text-brand-magenta mb-6">
+                    <i data-lucide="thermometer-snowflake" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Temperaturas Baixas</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Ajustes de undervolt e otimização do plano de energia para diminuir o aquecimento e estender a vida útil do hardware.
+                </p>
+            </div>
+
+            <!-- Feature Card 4 -->
+            <div class="glass-card p-8 rounded-2xl relative transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-brand-blue mb-6">
+                    <i data-lucide="hard-drive" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Limpeza Profunda de Disco</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Libere dezenas de Gigabytes ocupados por arquivos temporários, resíduos de atualizações antigas e caches escondidos.
+                </p>
+            </div>
+
+            <!-- Feature Card 5 -->
+            <div class="glass-card p-8 rounded-2xl relative transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-brand-purple mb-6">
+                    <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Remoção de Bloatware</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Remova aplicativos nativos inúteis do Windows que não deixam ser desinstalados normalmente pelo painel tradicional.
+                </p>
+            </div>
+
+            <!-- Feature Card 6 -->
+            <div class="glass-card p-8 rounded-2xl relative transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-brand-magenta/10 border border-brand-magenta/30 flex items-center justify-center text-brand-magenta mb-6">
+                    <i data-lucide="mouse-pointer-click" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Resposta Instantânea</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Redução da latência de mouse, teclado e monitor para garantir que seus comandos sejam registrados sem atrasos.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Chapter Breakdown / Syllabus -->
+    <section id="modulos" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-brand-purple mb-3">Conteúdo Detalhado</h2>
+            <p class="text-3xl sm:text-4xl font-black text-white">O que você vai aprender no eBook</p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <!-- Module 1 -->
+            <div class="glass-card rounded-xl p-6 transition-all border-l-4 border-l-brand-blue">
+                <div class="flex items-start justify-between">
+                    <div class="space-y-2">
+                        <span class="text-xs font-mono text-brand-blue font-bold">MÓDULO 01</span>
+                        <h3 class="text-xl font-bold text-white">Diagnóstico e Limpeza do Sistema</h3>
+                        <p class="text-gray-400 text-sm">Como identificar gargalos atuais de memória RAM, CPU e armazenamento antes de começar a otimização.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="glass-card rounded-xl p-6 transition-all border-l-4 border-l-brand-purple">
+                <div class="flex items-start justify-between">
+                    <div class="space-y-2">
+                        <span class="text-xs font-mono text-brand-purple font-bold">MÓDULO 02</span>
+                        <h3 class="text-xl font-bold text-white">Otimização Avançada do Windows 10/11</h3>
+                        <p class="text-gray-400 text-sm">Scripts seguros de desativação de telemetria, serviços em segundo plano e configuração do Registro (Regedit).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="glass-card rounded-xl p-6 transition-all border-l-4 border-l-brand-magenta">
+                <div class="flex items-start justify-between">
+                    <div class="space-y-2">
+                        <span class="text-xs font-mono text-brand-magenta font-bold">MÓDULO 03</span>
+                        <h3 class="text-xl font-bold text-white">Tuning de Placa de Vídeo (NVIDIA / AMD / Intel)</h3>
+                        <p class="text-gray-400 text-sm">Configuração ideal no painel de controle dos drivers para priorizar o desempenho em jogos sem perder qualidade visual essencial.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 4 -->
+            <div class="glass-card rounded-xl p-6 transition-all border-l-4 border-l-brand-blue">
+                <div class="flex items-start justify-between">
+                    <div class="space-y-2">
+                        <span class="text-xs font-mono text-brand-blue font-bold">MÓDULO 04</span>
+                        <h3 class="text-xl font-bold text-white">Redução Extrema de Latência & Input Lag</h3>
+                        <p class="text-gray-400 text-sm">Ajustes na fila de interrupções de periféricos USB, rede e agendador de processos de alta precisão.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 5 -->
+            <div class="glass-card rounded-xl p-6 transition-all border-l-4 border-l-brand-purple">
+                <div class="flex items-start justify-between">
+                    <div class="space-y-2">
+                        <span class="text-xs font-mono text-brand-purple font-bold">MÓDULO 05</span>
+                        <h3 class="text-xl font-bold text-white">Manutenção Preventiva e Proteção de Desempenho</h3>
+                        <p class="text-gray-400 text-sm">Rotinas automatizadas para manter seu computador sempre rápido ao longo dos meses sem precisar formatar.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Target Audience Checklist -->
+    <section id="para-quem" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div>
+                <h2 class="text-xs uppercase font-bold tracking-widest text-brand-magenta mb-3">Público-Alvo</h2>
+                <h3 class="text-3xl sm:text-4xl font-black text-white mb-6">Este guia foi feito sob medida para você se...</h3>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                            <i data-lucide="check" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm sm:text-base">Você joga games como Valorant, CS2, Fortnite, Warzone ou GTA V e sofre com quedas repentinas de quadros (FPS).</p>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                            <i data-lucide="check" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm sm:text-base">Seu computador demorava para ligar, abrir programas ou parece que travava ao realizar tarefas diárias simples.</p>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                            <i data-lucide="check" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm sm:text-base">Você trabalha com edição de vídeo, renderização 3D ou programação e precisa extrair o máximo do hardware atual.</p>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                            <i data-lucide="check" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm sm:text-base">Não tem dinheiro no momento para gastar com novos componentes (Placa de Vídeo/Processador) e quer gastar quase nada para turbinar o que já tem.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audience Visual Banner -->
+            <div class="glass-card p-8 rounded-3xl border border-brand-purple/30 bg-gradient-to-br from-brand-card to-brand-dark">
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-purple/20 text-brand-purple flex items-center justify-center font-bold text-xl">
+                            <i data-lucide="terminal" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">Método Passo a Passo</h4>
+                            <p class="text-xs text-gray-400">Sem termos técnicos incompreensíveis</p>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Não importa se você é um leigo em informática ou alguém experiente. O e-book foi escrito em linguagem clara com tutoriais visuais ilustrados e comandos pré-prontos para cópia e cola.
+                    </p>
+
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/10 font-mono text-xs text-brand-blue space-y-1">
+                        <div>&gt; echo "Otimização concluída com sucesso!"</div>
+                        <div class="text-emerald-400">&gt; Status: 100% de Performance Ativada</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing / CTA Section -->
+    <section id="garanta-o-seu" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+        <div class="relative glass-card p-8 sm:p-12 rounded-3xl border border-brand-blue/30 overflow-hidden shadow-2xl">
+            
+            <div class="absolute -top-24 -right-24 w-60 h-60 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <span class="inline-block px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-blue text-xs font-bold uppercase tracking-wider mb-6">
+                Oferta Limitada de Lançamento
+            </span>
+
+            <h2 class="text-3xl sm:text-5xl font-black text-white mb-4">
+                Liberte o Potencial do Seu Computador Hoje
+            </h2>
+            <p class="text-gray-400 max-w-xl mx-auto mb-8">
+                Adquira o eBook completo + Scripts bônus de otimização automatizada por um valor simbólico.
+            </p>
+
+            <div class="my-8">
+                <span class="text-gray-500 line-through text-lg">De R$ 97,00</span>
+                <div class="flex items-center justify-center space-x-1 mt-1">
+                    <span class="text-2xl font-bold text-gray-300">Por apenas</span>
+                    <span class="text-5xl sm:text-6xl font-black text-white">R$ 27<span class="text-2xl font-bold">,90</span></span>
+                </div>
+                <p class="text-xs text-brand-blue mt-2">Pagamento único • Acesso vitalício</p>
+            </div>
+
+            <div class="space-y-4 max-w-md mx-auto">
+                <!-- Direct link to your checkout page (Hotmart, Kiwify, Eduzz, etc) -->
+                <a href="https://seu-link-de-checkout.com" target="_blank" class="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-brand-blue via-brand-purple to-brand-magenta text-black font-extrabold text-lg shadow-neon-purple hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    <span>COMPRAR EBOOK AGORA</span>
+                </a>
+                
+                <div class="flex items-center justify-center space-x-6 text-xs text-gray-400 pt-4">
+                    <span class="flex items-center"><i data-lucide="lock" class="w-4 h-4 mr-1 text-emerald-400"></i> Pagamento Seguro</span>
+                    <span class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-1 text-brand-blue"></i> Entrega Imediata</span>
+                </div>
+            </div>
+
+            <!-- Guarantee Box -->
+            <div class="mt-10 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-left">
+                <div class="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white">Garantia Incondicional de 7 Dias</h4>
+                    <p class="text-xs text-gray-400">Se você não sentir melhora no desempenho do seu PC, devolvemos 100% do seu dinheiro sem perguntas.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-white/5">
+        <div class="text-center mb-16">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-brand-blue mb-3">Tire Suas Dúvidas</h2>
+            <p class="text-3xl sm:text-4xl font-black text-white">Perguntas Frequentes</p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <details class="glass-card rounded-xl p-6 group cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white list-none">
+                    <span>Como vou receber o eBook após a compra?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180"></i>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Assim que seu pagamento for confirmado, você receberá um e-mail instantâneo com os links para download do arquivo PDF e dos scripts extras.
+                </p>
+            </details>
+
+            <details class="glass-card rounded-xl p-6 group cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white list-none">
+                    <span>Existe algum risco de danificar meu Windows?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180"></i>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Não! Todas as dicas e otimizações apresentadas no e-book são 100% seguras, reversíveis e utilizam recursos nativos e homologados do próprio sistema operacional.
+                </p>
+            </details>
+
+            <details class="glass-card rounded-xl p-6 group cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white list-none">
+                    <span>Funciona para notebooks ou apenas desktops?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180"></i>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Funciona perfeitamente em ambos! Inclusive, notebooks costumam se beneficiar ainda mais das otimizações de plano de energia e undervolt ensinados.
+                </p>
+            </details>
+
+            <details class="glass-card rounded-xl p-6 group cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white list-none">
+                    <span>E se meu PC for muito antigo?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180"></i>
+                </summary>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    O guia conta com um capítulo dedicado exclusivamente a computadores mais fracos (com 4GB/8GB de RAM ou sem placa de vídeo dedicada) para garantir que ganhem fluidez no uso diário.
+                </p>
+            </details>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12 px-4 sm:px-6 lg:px-8 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-2">
+                <div class="w-6 h-6 rounded bg-brand-blue flex items-center justify-center text-black font-bold">
+                    <i data-lucide="zap" class="w-4 h-4"></i>
+                </div>
+                <span class="font-bold text-white text-sm">PC BOOST</span>
+            </div>
+
+            <div>
+                <p>&copy; 2026 PC Boost Guide. Todos os direitos reservados.</p>
+                <p class="mt-1">Este site não faz parte do Facebook ou Google. Não nos responsabilizamos por mal uso de comandos.</p>
+            </div>
+
+            <div class="flex space-x-4 text-gray-400">
+                <a href="#" class="hover:text-white transition-colors">Termos</a>
+                <a href="#" class="hover:text-white transition-colors">Privacidade</a>
+                <a href="mailto:suporte@seu-dominio.com" class="hover:text-white transition-colors">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
